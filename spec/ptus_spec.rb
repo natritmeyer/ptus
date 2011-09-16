@@ -18,6 +18,12 @@ describe "ptus" do
      @captured_output.read.should include "hello"
    end
    
-  it "should print the string that is sent to it"
+  it "should print the string that is sent to it" do
+    ptus "hello"
+    @captured_output.close_write
+    @captured_output.rewind
+    @captured_output.read.should include "hello"
+  end
+  
   it "should print a message saying where the ptus was found"
 end
