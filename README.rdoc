@@ -1,0 +1,14 @@
+I remember one colleague in particular who used to often type 'ptus' into his ruby code instead of 'puts'. The hilarious thing was that every time he made the mistake, he would explode in a rage with himself when the code ran and failed: "Just because of a stupid typo!!!". Poor guy. He could never break the habit, so we wrote a monkey patch that would allow his code to run, but the line of code containing the offending typo would be flagged. "Everyone's a winner": his code would run, his typo would be flagged, and since the monkey patch lived on his machine and never got checked in, 'ptus' didn't creep into the codebase because it only worked on his machine.
+
+I now find myself typing 'ptus' enough for it to begin to irritate me. So I've rewritten the code and bundled it up properly. Now, the following is possible:
+
+  require 'ptus'
+  ptus "Hello"
+
+The output will be something like:
+
+  Change 'ptus' to 'puts' here: my_file.rb:2:in `<main>'
+  Hello
+
+Your code will run, it won't complain about a missing 'ptus' method, but it will warn you about the typo!
+
