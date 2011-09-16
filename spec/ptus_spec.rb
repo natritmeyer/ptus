@@ -25,5 +25,10 @@ describe "ptus" do
     @captured_output.read.should include "hello"
   end
   
-  it "should print a message saying where the ptus was found"
+  it "should print a message saying where the ptus was found" do
+    ptus "hello"
+    @captured_output.close_write
+    @captured_output.rewind
+    @captured_output.read.should match /Change 'ptus' to 'puts' here: .*spec\/ptus_spec.rb:29/
+  end
 end
