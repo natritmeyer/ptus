@@ -1,7 +1,7 @@
 ==ptus
 Author: Nat Ritmeyer (http://www.natontesting.com)
 ===Intro
-I remember one colleague in particular who used to often type 'ptus' into his ruby code instead of 'puts'. Every time he made the mistake, he would explode in a rage with himself when the code ran and failed: "Just because of a stupid [expletive] typo!!!". He could never break the habit, so we wrote a monkey patch that would allow his code to run, but the line of code containing the offending typo would be flagged. "Everyone's a winner": his code would run, his typo would be flagged, and since the monkey patch lived on his machine and never got checked in (svn ignore!), 'ptus' didn't creep into the codebase.
+I remember one colleague who used to often type 'ptus' into his ruby code instead of 'puts'. Every time he made the mistake, he would explode in a rage with himself when the code ran and failed: "Just because of a stupid [expletive] typo!!!". He could never break the habit, so we wrote a monkey patch that would allow his code to run, but the line of code containing the offending typo would be flagged. "Everyone's a winner": his code would run, his typo would be flagged, and since the monkey patch lived on his machine and never got checked in (svn ignore!), 'ptus' didn't creep into the codebase.
 
 A few years on, I now find myself typing 'ptus' enough for it to begin to irritate me. Age related, maybe. So I've rewritten the code and bundled it up properly into this gem.
 
@@ -24,7 +24,7 @@ Simply require the gem, and make as many 'ptus' typos as you want!
 Writing code like the above will no longer kill your app at runtime; instead it will run just fine, but you'll get the following warning:
 
   This is right
-  Change 'ptus' to 'puts' here: my_file.rb:4:in `<main>'
+  Change 'ptus' to 'puts' here: my_file.rb:5:in `<main>'
   This is wrong
   This is also right
 
