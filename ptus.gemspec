@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "ptus"
-  s.version     = "1.0.1"
+  s.version     = "1.0.2"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Nat Ritmeyer"]
   s.email       = ["nat@natontesting.com"]
